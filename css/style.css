@@ -1,3 +1,67 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   color: purple;
+}
+#gridbox {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-areas:
+    "a11 a12 a13"
+    "a21 a22 a23"
+    "a31 a32 a33";
+}
+#title {
+  
+}
+#subtitle {
+ 
+}
+#a11 {
+  grid-area: a11;
+}
+#a12 {
+  grid-area: a12;
+}
+#a13 {
+  grid-area: a13;
+}
+#a21 {
+  grid-area: a21;
+}
+#a22 {
+  grid-area: a22;
+}
+#a23 {
+  grid-area: a23;
+}
+#a31 {
+  grid-area: a31;
+}
+#a32 {
+  grid-area: a32;
+}
+#a33 {
+  grid-area: a33;
+}
+#newgame {
+  
+}
+#reset {
+
+}
+#gamemessage {
+
+}
+#score1 {
+ 
+}
+#score2 {
+ 
+}
+#gridbox {
+  border: 1px solid black;
 }
