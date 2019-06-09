@@ -69,16 +69,19 @@ document.addEventListener("DOMContentLoaded", function(e) {
     if (!boxClicked[e.target.id] && !gameOver) {
       console.log(e.target.id + " Clicked");
       e.target.textContent = x;
+      //e.target.src = "img/doggy.jpg";
       if (currentPlayer === 1) {
         e.target.textContent = x;
         //e.target.classList.add(x);
         currentBoard[e.target.id] = x;
+        currentBoard[e.target.src] = "img/doggy.jpg";
         console.log(e.target.classList);
         currentPlayer++;
       } else {
         e.target.textContent = o;
         //e.target.classList.add(o);
         currentBoard[e.target.id] = o;
+        currentBoard[e.target.src] = "img/kitty.jpg";
         currentPlayer--;
       }
     checkWin();
@@ -115,13 +118,17 @@ function checkWin() {
     //scorePl2.textContent = scorePlayer1;
     scorePlayer1++;
     document.getElementById("gamemessage").textContent = "Player 2 Wins!";
+    document.getElementById("gamemessage").style.background = "rgba(255,255,255,0.5)";
+    document.getElementById("gamemessage").style.border = "1px solid black";
     //gameMessage.textContent = "Player 2 Wins!";
   } else if (currentPlayer === 2 && isWin) {
     console.log("Player1 wins");
-    document.getElementById("scoreplayer1").textContent = scorePlayer1;
+    document.getElementById("scoreplayer1").textContent = scorePlayer2;
     //scorePl1.textContent = scorePlayer2;
     scorePlayer2++;
     document.getElementById("gamemessage").textContent = "Player 1 Wins!";
+    document.getElementById("gamemessage").style.background = "rgba(255,255,255,0.5)";
+    document.getElementById("gamemessage").style.border = "1px solid black";
     //gameMessage.textContent = "Player 1 Wins!";
   }
   checkForDraw();

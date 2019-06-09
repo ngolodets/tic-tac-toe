@@ -121,9 +121,6 @@ h1 {
   border-radius: 10px;
   border: 1px solid rgb(48, 46,46);
 }
-#newgame:after {
-  background-color: rgb(115, 187, 115);
-}
 #reset {
   font-size: 20px;
   margin: 5px;
